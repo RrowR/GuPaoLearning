@@ -1,4 +1,4 @@
-package com.study.openclose;
+package com.study.opencloseprinciple;
 
 /**
  * @author: Rrow
