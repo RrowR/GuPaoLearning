@@ -3,7 +3,7 @@ package com.study.simpleresponsibilityprinciple.method;
 /**
  * @author: Rrow
  * @date: 2022/4/14 0:16
- * 方法单一原则
+ * 方法单一原则，一个方法内不应该还有多个逻辑
  */
 public class MethodSimple {
     // 不符合方法单一原则,将if/else方法进行抽出
