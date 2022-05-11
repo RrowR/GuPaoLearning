@@ -1,5 +1,6 @@
 package com.gupao.myset;
 
+import java.util.TreeMap;
 import java.util.TreeSet;
 
 /**
@@ -12,7 +13,8 @@ public class MyTreeSet {
         * 构造方法里有
         *   this(new TreeMap<E,Object>());
         * */
-        TreeSet set = new TreeSet();
-
+        // TreeSet treeSet = new TreeSet();
+        TreeMap treeMap = new TreeMap();
+        treeMap.put("maoyuna","nya");
     }
 }
