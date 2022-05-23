@@ -1,5 +1,7 @@
 package com.study.liskovsubstitutionprinciple.methodparam;
 
+import com.study.liskovsubstitutionprinciple.methodreturn.Base;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -15,8 +17,10 @@ import java.util.Map;
 public class TestMethodParam {
     public static void main(String[] args) {
         Son son = new Son();
-        HashMap hashMap = new HashMap();
-        Map map = new HashMap();
-        son.getBean(map);
+        // Father son = new Son();
+        // HashMap hashMap = new HashMap();
+        // son.getBean(hashMap);
+        // Map map = new HashMap();
+        // son.getBean(map);
     }
 }
