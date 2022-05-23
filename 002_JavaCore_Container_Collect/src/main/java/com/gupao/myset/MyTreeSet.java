@@ -13,7 +13,7 @@ public class MyTreeSet {
         * 构造方法里有
         *   this(new TreeMap<E,Object>());
         * */
-        // TreeSet treeSet = new TreeSet();
+        TreeSet treeSet = new TreeSet();
         TreeMap treeMap = new TreeMap();
         treeMap.put("maoyuna","nya");
     }
