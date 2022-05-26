@@ -12,7 +12,7 @@ public class LazySimpleSingletion {
     }
 
     // 有多线程安全问题
-    public static LazySimpleSingletion getInstance(){
+    public synchronized static LazySimpleSingletion getInstance(){
         if (lazySimpleSingletion == null){
             lazySimpleSingletion = new LazySimpleSingletion();
         }
