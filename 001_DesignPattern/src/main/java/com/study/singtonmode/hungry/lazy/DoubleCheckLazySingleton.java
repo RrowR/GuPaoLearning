@@ -1,11 +1,12 @@
 package com.study.singtonmode.hungry.lazy;
 
 /**
- * @Author: Rrow
- * @Date: 2022/5/26 12:31
+ * @author: Rrow
+ * @date: 2022/5/26 23:00
  */
 public class DoubleCheckLazySingleton {
 
+    // 这里需要volatile关键字，避免指令重排
     private static volatile DoubleCheckLazySingleton doubleCheckLazySingleton;
 
     // 构造方法私有化
