@@ -16,4 +16,9 @@ public class SeriableSingleton implements Serializable {
     public static SeriableSingleton getInstance(){
         return INSTANCE;
     }
+
+    // 桥接模式
+    private Object readResolve(){
+        return INSTANCE;
+    }
 }
