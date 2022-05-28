@@ -9,4 +9,9 @@ public class Nekoha implements IPlay{
     public void play() {
         System.out.println("play with nekoha");
     }
+
+    @Override
+    public void eat() {
+        System.out.println("nekoha eat");
+    }
 }
