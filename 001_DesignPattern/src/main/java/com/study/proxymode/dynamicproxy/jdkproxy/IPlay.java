@@ -7,5 +7,5 @@ package com.study.proxymode.dynamicproxy.jdkproxy;
 public interface IPlay {
     void play();
 
-    void eat();
+
 }
