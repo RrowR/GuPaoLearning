@@ -11,31 +11,33 @@ import java.io.FileOutputStream;
 public class JdkDynamicProxyTest {
     public static void main(String[] args) {
         NyanerProxy proxy = new NyanerProxy();
+        // NyanerProxy proxy2 = new NyanerProxy();
         // 传入目标对象，返回一个代理对象
         // IPlay neko = (IPlay) proxy.getInstance(new Nekoha());
         // IPlay neko = ((IPlay) proxy.getInstance(new Nekoha()));
         // 代理对象来调用方法
         // neko.play();
 
-        Object instance = proxy.getInstance(new Nekoha());
-        IPlay neko = ((IPlay) proxy.getInstance(instance));
-        neko.play();
+        IPlay instance = ((IPlay) proxy.getInstance(new Nekoha()));
+        instance.play();
+        // IPlay instance2 = (IPlay) proxy.getInstance(instance);
+        // instance2.play();
 
         // 代理工具类，并不是java.lang.reflect包下的内容
-        byte[] bytes = ProxyGenerator.generateProxyClass("$Proxy0", new Class[]{IPlay.class});
-        try {
+        // byte[] bytes = ProxyGenerator.generateProxyClass("$Proxy0", new Class[]{IPlay.class});
+        // try {
             // 生成出一个代理类，可以用IDEA来进行反编译
-            FileOutputStream fileOutputStream = new FileOutputStream("./$Proxy0.class");
-            fileOutputStream.write(bytes);
-            fileOutputStream.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+            // FileOutputStream fileOutputStream = new FileOutputStream("./$Proxy0.class");
+            // fileOutputStream.write(bytes);
+            // fileOutputStream.close();
+        // } catch (Exception e) {
+        //     e.printStackTrace();
+        // }
 
 
         // 这里无法调用Ieat接口里的eat方法
-        IEat shuzuku = (IEat) proxy.getInstance(new Shuzuku());
+        // IEat shuzuku = (IEat) proxy.getInstance(new Shuzuku());
         // 代理对象来调用方法
-        shuzuku.eat();
+        // shuzuku.eat();
     }
 }
