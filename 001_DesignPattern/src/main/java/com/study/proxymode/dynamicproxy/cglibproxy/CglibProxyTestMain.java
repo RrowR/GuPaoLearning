@@ -14,7 +14,8 @@ public class CglibProxyTestMain {
             CGLIB debugging enabled, writing to 'F:\CGLIB'
          */
         System.setProperty(DebuggingClassWriter.DEBUG_LOCATION_PROPERTY,"./CGLIB");
-        new NekohaProxy().getInstance(Shuzuku.class);
-        // shuzuku.play();
+        Shuzuku shuzuku = (Shuzuku) new NekohaProxy().getInstance(Shuzuku.class);
+        Shuzuku shuzuku2 = (Shuzuku) new NekohaProxy().getInstance(shuzuku.getClass());
+        shuzuku2.play();
     }
 }

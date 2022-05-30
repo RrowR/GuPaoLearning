@@ -30,10 +30,10 @@ public class NekohaProxy implements MethodInterceptor {
     }
 
     private void after() {
-        System.out.println("开始找人");
+        System.out.println("游玩结束");
     }
 
     private void before() {
-        System.out.println("游玩结束");
+        System.out.println("开始找人");
     }
 }
