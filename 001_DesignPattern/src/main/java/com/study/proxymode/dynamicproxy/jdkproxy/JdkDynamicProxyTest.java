@@ -13,8 +13,12 @@ public class JdkDynamicProxyTest {
         NyanerProxy proxy = new NyanerProxy();
         // 传入目标对象，返回一个代理对象
         // IPlay neko = (IPlay) proxy.getInstance(new Nekoha());
-        IPlay neko = ((IPlay) proxy.getInstance(new Nekoha()));
+        // IPlay neko = ((IPlay) proxy.getInstance(new Nekoha()));
         // 代理对象来调用方法
+        // neko.play();
+
+        Object instance = proxy.getInstance(new Nekoha());
+        IPlay neko = ((IPlay) proxy.getInstance(instance));
         neko.play();
 
         // 代理工具类，并不是java.lang.reflect包下的内容
