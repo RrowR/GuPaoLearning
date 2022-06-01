@@ -31,7 +31,10 @@ public class DeepConcretePrototype implements Cloneable, Serializable {
         }
     }
 
-    public DeepConcretePrototype deepConcretePrototype(){
+    /*
+    *  深克隆方式1:成员对象也进行克隆(递归克隆)
+    * */
+    public DeepConcretePrototype deepClone(){
         try {
             DeepConcretePrototype deepConcretePrototype = ((DeepConcretePrototype) super.clone());
             // clone 是Arraylist里的方法
@@ -40,7 +43,12 @@ public class DeepConcretePrototype implements Cloneable, Serializable {
         } catch (CloneNotSupportedException e) {
             throw new RuntimeException(e);
         }
-
     }
+
+
+
+
+
+
 
 }

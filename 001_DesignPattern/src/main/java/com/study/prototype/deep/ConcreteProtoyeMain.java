@@ -18,7 +18,7 @@ public class ConcreteProtoyeMain {
         prototype.setHobbies1(hobbies);
 
         // 拷贝原型对象
-        DeepConcretePrototype cloneType = prototype.clone();
+        DeepConcretePrototype cloneType = prototype.deepClone();
         cloneType.getHobbies1().add("喵喵喵");
 
         System.out.println("原型对象: " + prototype);
