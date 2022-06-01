@@ -1,8 +1,9 @@
 package com.study.prototype.deep;
 
+import com.alibaba.fastjson.JSON;
 import lombok.Data;
 
-import java.io.Serializable;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -44,6 +45,29 @@ public class DeepConcretePrototype implements Cloneable, Serializable {
             throw new RuntimeException(e);
         }
     }
+
+    // 序列化克隆,这里要实现序列化接口
+    public DeepConcretePrototype serializableClone(){
+        try {
+            ByteArrayOutputStream bos = new ByteArrayOutputStream();
+            ObjectOutputStream oos = new ObjectOutputStream(bos);
+            oos.writeObject(this);
+            ByteArrayInputStream bis = new ByteArrayInputStream(bos.toByteArray());
+            ObjectInputStream ois = new ObjectInputStream(bis);
+            return ((DeepConcretePrototype) ois.readObject());
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    // 通过json的方式反序列化
+    public DeepConcretePrototype deepCloneJson(){
+        String jsonObject = JSON.toJSONString(this);
+        return JSON.parseObject(jsonObject,DeepConcretePrototype.class);
+    }
+
+
 
 
 
