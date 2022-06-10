@@ -14,7 +14,6 @@ public class MyTest {
     public void test(){
         ApplicationContext app = new AnnotationConfigApplicationContext(MyConfig.class);
 
-
         MyService service = app.getBean(MyService.class);
         service.print();
 

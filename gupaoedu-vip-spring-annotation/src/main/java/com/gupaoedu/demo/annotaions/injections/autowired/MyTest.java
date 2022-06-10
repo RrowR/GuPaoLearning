@@ -26,4 +26,25 @@ public class MyTest {
         MyDao dao = app.getBean(MyDao.class);
         System.out.println(dao);
     }
+
+    @Test
+    public void test02(){
+        ApplicationContext app = new AnnotationConfigApplicationContext(MyConfig.class);
+        // 这里要类名首字母小写
+        Object myController = app.getBean("myController");
+        System.out.println(myController);
+    }
+
+    /*
+    * 判断注入的是不是同一个对象
+    * */
+    @Test
+    public void test03(){
+        ApplicationContext app = new AnnotationConfigApplicationContext(MyConfig.class);
+        MyService myService = app.getBean(MyService.class);
+        myService.print();
+
+        MyDao myDao = app.getBean(MyDao.class);
+        System.out.println(myDao);
+    }
 }
