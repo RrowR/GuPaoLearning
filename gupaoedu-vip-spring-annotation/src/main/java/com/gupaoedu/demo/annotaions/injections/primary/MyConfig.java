@@ -18,19 +18,17 @@ import org.springframework.context.annotation.Primary;
 public class MyConfig {
 
 
-    @Primary
     @Bean("myDao")
     public MyDao dao(){
         MyDao dao = new MyDao();
-        dao.setFlag("9");
+        dao.setFlag("6");
         return dao;
     }
-
 
     @Bean("myDao")
     public MyDao myDao(){
         MyDao dao = new MyDao();
-        dao.setFlag("3");
+        dao.setFlag("5");
         return dao;
     }
 }

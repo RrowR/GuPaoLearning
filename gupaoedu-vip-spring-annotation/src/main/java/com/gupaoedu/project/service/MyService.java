@@ -12,8 +12,8 @@ import javax.annotation.Resource;
  */
 @Service
 public class MyService {
-    // @Qualifier("dao")
 //    @Resource(name="dao")
+    @Qualifier("myDao")
     @Autowired
     private MyDao myDao;
 
