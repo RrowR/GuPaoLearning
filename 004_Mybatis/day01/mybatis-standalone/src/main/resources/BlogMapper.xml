@@ -9,6 +9,8 @@
     <cache type="org.mybatis.caches.redis.RedisCache"
            eviction="FIFO" flushInterval="60000" size="512" readOnly="true"/>
 -->
+    <!--这个标签是有默认值的，可以什么properties都不写-->
+<!--    <cache/>  -->
         <cache type="org.apache.ibatis.cache.impl.PerpetualCache"
                size="1024"
                eviction="LRU"
@@ -52,7 +54,7 @@
     </resultMap>
 
     <!--  按作者查询文章评论的结果（多对多） -->
-    <resultMap id="AuthorWithBlogMap" type="com.gupaoedu.domain.associate.AuthorAndBlog" >
+    <resultMap id="AuthorWithBlogMap" type="com.gupaoedu.domain.associate.AuthorAndBlog">
         <id column="author_id" property="authorId" jdbcType="INTEGER"/>
         <result column="author_name" property="authorName" jdbcType="VARCHAR"/>
         <collection property="blog" ofType="com.gupaoedu.domain.associate.BlogAndComment">
