@@ -11,11 +11,13 @@
 -->
     <!--这个标签是有默认值的，可以什么properties都不写-->
 <!--    <cache/>  -->
-        <cache type="org.apache.ibatis.cache.impl.PerpetualCache"
-               size="1024"
-               eviction="LRU"
-               flushInterval="120000"
-               readOnly="false"/>
+        <cache type="org.mybatis.caches.redis.RedisCache"/>
+    <!-- 会连接到redis -->
+<!--        <cache type="org.mybatis.caches.redis.RedisCache"-->
+<!--               size="1024"-->
+<!--               eviction="LRU"-->
+<!--               flushInterval="120000"-->
+<!--               readOnly="false"/>-->
 
     <resultMap id="BaseResultMap" type="blog">
         <id column="bid" property="bid" jdbcType="INTEGER"/>
