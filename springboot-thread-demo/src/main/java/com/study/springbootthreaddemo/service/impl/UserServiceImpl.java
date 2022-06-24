@@ -19,7 +19,12 @@ public class UserServiceImpl implements UserService{
 
     @Override
     public int insertUser(String name) {
-        return userMapper.insertUser(name);
+        return userMapper.insertUserByName(name);
+    }
+
+    @Override
+    public int insertUser(User user) {
+        return userMapper.insertUser(user);
     }
 }
 

@@ -1,6 +1,7 @@
 package com.study.springbootthreaddemo.service;
 
 import com.study.springbootthreaddemo.bean.User;
+import org.apache.ibatis.annotations.Param;
 
 /**
 * @author atlantis
@@ -9,4 +10,6 @@ import com.study.springbootthreaddemo.bean.User;
 */
 public interface UserService {
     int insertUser(String name);
+
+    int insertUser(User user);
 }

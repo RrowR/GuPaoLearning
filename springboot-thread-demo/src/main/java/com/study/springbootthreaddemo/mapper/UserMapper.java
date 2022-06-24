@@ -2,6 +2,7 @@ package com.study.springbootthreaddemo.mapper;
 
 import com.study.springbootthreaddemo.bean.User;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 
 /**
 * @author atlantis
@@ -11,7 +12,9 @@ import org.apache.ibatis.annotations.Mapper;
 */
 @Mapper
 public interface UserMapper {
-    int insertUser(String name);
+    int insertUserByName(String name);
+
+    int insertUser(@Param("user") User user);
 }
 
 

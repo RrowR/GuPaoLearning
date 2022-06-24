@@ -6,3 +6,12 @@ spring:
         driver-class-name: com.mysql.cj.jdbc.Driver
 mybatis:
     mapper-locations: classpath:mapper/*.xml
+
+alisms:
+    signName: rrow汽车出租管理
+    templateCode: SMS_227733869
+    phoneNumbers: 17371246702
+    templateParam: "{\"code\":\"123432\"}"
+    accessKeyId: LTAI5tMgK5Z2FLXG6ezChoDK
+    accesskeySecret: DsHt7JECU8B6X9v6RH0yWtTCm4XXJZ
+

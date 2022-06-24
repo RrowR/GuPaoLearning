@@ -8,7 +8,11 @@
             <result property="name" column="name" jdbcType="VARCHAR"/>
     </resultMap>
     <insert id="insertUser">
-        insert into User(name) values (#{name,jdbcType=VARCHAR})
+        insert into  User(name) values (#{user.name,jdbcType=VARCHAR})
+    </insert>
+
+    <insert id="insertUserByName" parameterType="java.lang.String">
+        insert into  User(name) values (#{name,jdbcType=VARCHAR})
     </insert>
 
 
